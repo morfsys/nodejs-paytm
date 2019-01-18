@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f1" id="myForm" method="post" action="https://pguat.paytm.com/oltp-web/processTransaction">
+        <% for (name in result) {
+            %>
+        <input type="hidden" name='<%= name %>' value='<%= result[name] %>' />
+        <%}%>
+    </form>
+
+    <script>
+        document.f1.submit();
+    </script>
+</body>
+
+</html>
